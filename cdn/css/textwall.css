@@ -1,0 +1,27 @@
+:root {
+    --x: -50vh;
+    --y: -50vh;
+}
+
+p[id="textwall"] {
+    mask-image: radial-gradient(#ffffff09, #00000000);
+
+    user-select: none;
+
+    mask-size: 50vh 50vh;
+    mask-repeat: no-repeat;
+    mask-position: var(--x) var(--y);
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    color: #ffffff79;
+
+    word-wrap: break-word;
+
+    overflow: hidden;
+
+    z-index: -1;
+}

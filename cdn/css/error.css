@@ -1,0 +1,31 @@
+.error-message {
+    display: flex;
+
+    position: fixed;
+
+    bottom: -200px;
+
+    justify-content: center;
+
+    width: 100%;
+
+    transition: all 1s ease 0s;
+}
+
+.error-message p {
+    max-width: 25%;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    border: red solid 1px;
+    border-radius: 5px;
+
+    font-family: "Open Sans", sans-serif;
+
+    color: #ffffff;
+    
+    background-color: #ff00003b;
+}
