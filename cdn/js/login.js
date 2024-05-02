@@ -24,7 +24,7 @@ if (navigator.userAgent.indexOf("Firefox") != -1) platform = "Firefox";
 if (navigator.userAgent.indexOf("Safari") != -1) platform = "Safari";
 if (navigator.userAgent.indexOf("Chrome") != -1) platform = "Chrome";
 
-submit.addEventListener("click", () => {
+function login() {
     const xhr = new XMLHttpRequest()
     xhr.open("POST", `${domain}/v1/account/login`)
     xhr.setRequestHeader("Accept", "application/json")
@@ -62,4 +62,12 @@ submit.addEventListener("click", () => {
         "os": "${os}",
         "platform": "${platform}"
     }`)
+}
+
+document.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+        login()
+    }
 })
+
+submit.addEventListener("click", login)
