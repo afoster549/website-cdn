@@ -7,7 +7,7 @@ const emailFeild = document.getElementById("email-feild")
 const passwordFeild = document.getElementById("password-feild")
 const submit = document.getElementById("submit")
 
-submit.addEventListener("click", () => {
+function signup() {
     const xhr = new XMLHttpRequest()
     xhr.open("POST", `${domain}/v1/account/register`)
     xhr.setRequestHeader("Accept", "application/json")
@@ -58,4 +58,12 @@ submit.addEventListener("click", () => {
         "email": "${emailFeild.value}",
         "password": "${passwordFeild.value}"
     }`)
+}
+
+document.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+        signup()
+    }
 })
+
+submit.addEventListener("click", signup)

@@ -29,7 +29,7 @@ p[id="info"] {
 }
 
 .background {
-    background-image: url("../../cdn/images/background_image.jpg");
+    background-image: url("https://cdn.afoster.uk/images/background_image.jpg");
     background-size: cover;
 
     opacity: 0.025;

@@ -5,7 +5,7 @@ const domain = "http://localhost:8080"
 const emailFeild = document.getElementById("email-feild")
 const submit = document.getElementById("submit")
 
-submit.addEventListener("click", () => {
+function forgotpassword() {
     const xhr = new XMLHttpRequest()
     xhr.open("POST", `${domain}/v1/account/sendresetlink`)
     xhr.setRequestHeader("Accept", "application/json")
@@ -31,4 +31,12 @@ submit.addEventListener("click", () => {
     xhr.send(`{
         "email": "${emailFeild.value}"
     }`)
+}
+
+document.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+        forgotpassword()
+    }
 })
+
+submit.addEventListener("click", forgotpassword)
