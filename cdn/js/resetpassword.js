@@ -6,7 +6,7 @@ const passwordFeild = document.getElementById("password-feild")
 const confirmPasswordFeild = document.getElementById("confirm-password-feild")
 const submit = document.getElementById("submit")
 
-submit.addEventListener("click", () => {
+function resetpassword() {
     passwordFeild.style.borderColor = "#ffffff"
     confirmPasswordFeild.style.borderColor = "#ffffff"
 
@@ -37,4 +37,12 @@ submit.addEventListener("click", () => {
 
         confirmPasswordFeild.parentNode.children[0].innerText = "Passwords don't match."
     }
+}
+
+document.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+        resetpassword()
+    }
 })
+
+submit.addEventListener("click", resetpassword)
