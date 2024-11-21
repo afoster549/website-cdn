@@ -9,7 +9,7 @@ const submit = document.getElementById("submit")
 
 function signup() {
     const xhr = new XMLHttpRequest()
-    xhr.open("POST", `${domain}/v1/account/register`)
+    xhr.open("POST", `${domain}/v1/account/create`)
     xhr.setRequestHeader("Accept", "application/json")
     xhr.setRequestHeader("Content-Type", "application/json")
 
